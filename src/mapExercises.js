@@ -6,6 +6,9 @@ const instructors = useInstructors();
 // Export a function named getStudentNames
 // It should not accept any parameters`
 // It should return an array of strings. Each string should be the full name of the student
+export const getStudentNames = () => {
+
+};
 
 // Export a function named StudentList
 // It should not accept any parameters
@@ -17,3 +20,6 @@ const instructors = useInstructors();
     <h2>Cohort 43</h2>
   </div>
 */
+export const StudentList = () => {
+
+};

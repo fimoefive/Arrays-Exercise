@@ -56,10 +56,10 @@ export const getStudentByName = (fullName) => {
 // It should return the instructor object of the student whose id matches `studentId`
 // Ex: getInstructorOfStudent(4)      // returns Brenda Long
 export const getInstructorOfStudent = (studentId) => {
-    const instuctorOfStudent = instructors.find((instructor) => {
-        return instuctorOfStudent.studentId === studentId:
+    const foundStudentId = instructors.find((instructor) => {
+        return instuctorOfStudent.studentId === studentId;
     })
-    return instuctorOfStudent;
+    return foundStudentId;
 };
 
 // Export a function called getStudentWithMostLangs
