@@ -6,14 +6,14 @@ const instructors = useInstructors();
 // Export a function named getStudentNames
 // It should not accept any parameters`
 // It should return an array of strings. Each string should be the full name of the student
-let stringArray = [];
+// let stringArray = [];
 export const getStudentNames = () => {
     const studentByName = students.map((student) => {
-      stringArray.push(student.firstName + " " + student.lastName)
+      return student.firstName.toUpperCase() + " " + student.lastName.toUpperCase()
     })
-    return stringArray;
+    return studentByName;
 };
-
+console.log(getStudentNames);
 // Export a function named StudentList
 // It should not accept any parameters
 // It should return a single HTMLString that contains a <div> element for every student that looks like the following:
@@ -27,7 +27,7 @@ export const getStudentNames = () => {
 let HTMLString = [];
 export const StudentList = () => {
   const studentString = students.map((student) => {
-    const fullName = student.firstName + " " + student.lastName
+    const fullName = student.firstName.toUpperCase()  + " " + student.lastName.toUpperCase() 
     return HTMLString += `
       <div>
       <h1>Summer Smith</h1>
@@ -37,3 +37,4 @@ export const StudentList = () => {
   })
   return studentString.join(" ");
 };
+console.log(StudentList);

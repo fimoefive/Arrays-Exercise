@@ -41,7 +41,7 @@ export const getStudentByLastName = (lastName) => {
     })
     return foundName;
 };
-
+console.log(getStudentByLastName)
 // Export a function called getStudentByName
 // It should accept one string parameter named `fullName`
 // It should return the student object whose first and last name match `fullName`
