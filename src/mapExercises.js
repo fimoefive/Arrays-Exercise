@@ -6,9 +6,10 @@ const instructors = useInstructors();
 // Export a function named getStudentNames
 // It should not accept any parameters`
 // It should return an array of strings. Each string should be the full name of the student
+let stringArray = [];
 export const getStudentNames = () => {
-    const stringArray = students.map((student) => {
-      return student.firstName + " " + student.lastName
+    const studentByName = students.map((student) => {
+      stringArray.push(student.firstName + " " + student.lastName)
     })
     return stringArray;
 };
