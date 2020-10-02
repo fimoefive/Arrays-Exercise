@@ -24,9 +24,16 @@ export const getStudentNames = () => {
     <h2>Cohort 43</h2>
   </div>
 */
+let HTMLString = [];
 export const StudentList = () => {
-  const HTMLString = students.map((information) => {
-    return information.firstName + " " + student.lastName
+  const studentString = students.map((student) => {
+    const fullName = student.firstName + " " + student.lastName
+    return HTMLString += `
+      <div>
+      <h1>Summer Smith</h1>
+      <h2>Cohort 43</h2>
+      </div>
+    `
   })
-  return HTMLString;
+  return studentString.join(" ");
 };

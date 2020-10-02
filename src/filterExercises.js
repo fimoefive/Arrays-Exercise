@@ -6,10 +6,9 @@ const instructors = useInstructors();
 // Export a function named getStudentsInCohort
 // It should accept one integer parameter named `cohort`
 // It should return an array of just the students who are in that cohort
-
 export const getStudentsInCohort = (cohort) => {
     const studentArray = students.filter((student) => {
-        return student.cohort === 43
+        return student.cohort === cohort
     });
     return studentArray;
 };
@@ -68,7 +67,7 @@ export const getAvailableInstructors = () => {
 
 export const getStudentsByLanguage = (language) => {
     const studentLanguages = students.filter((student) => {
-        return student.languages === "Kotlin"
+        return student.languages === true
     })
         return studentLanguages;
 };
@@ -81,3 +80,11 @@ export const getStudentsByLanguage = (language) => {
 // It should accept an array of strings as a parameter named `languages`
 // It should return an array of students who know ALL of the given languages
 // Ex: getStudentsByLanguages(["Javascript", "C#"])
+let languageArray = [];
+
+const getStudentsByLanguages = (languages) => {
+    const givenLanguage = students.filter((student) => {
+        return student.languages 
+    })
+        return languageArray;
+};

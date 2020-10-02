@@ -37,7 +37,7 @@ export const getInstructorById = (id) => {
 
 export const getStudentByLastName = (lastName) => {
     const foundName = students.find((studentName) => {
-        return studentName.lastName === lastName;
+        return studentName.lastName.toUpperCase() === lastName.toUpperCase();
     })
     return foundName;
 };
@@ -50,7 +50,7 @@ export const getStudentByLastName = (lastName) => {
 
 export const getStudentByName = (fullName) => {
     const findStudentName = students.find((student) => {
-        const fullName = student.firstName + " " + student.lastName
+        const fullName = student.firstName.toUpperCase() + " " + student.lastName.toUpperCase()
         return fullName === fullName;
     })
     return findStudentName;
@@ -77,6 +77,7 @@ export const getInstructorOfStudent = (studentId) => {
 // It should return the student object who knows the most programming languages
 // Ex: getStudentWithMostLangs()      // returns Rick Sanchez
 // HINT: You may not need the `find` method for this. This is one of the few cases where a `for` loop might be appropriate
+let i = 0;
 export const getStudentWithMostLangs = () => {
 
     return
