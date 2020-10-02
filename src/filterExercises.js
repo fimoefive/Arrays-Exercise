@@ -7,23 +7,31 @@ const instructors = useInstructors();
 // It should accept one integer parameter named `cohort`
 // It should return an array of just the students who are in that cohort
 export const getStudentsInCohort = (cohort) => {
-
+    const studentArray = students.filter((student) => {
+        return student.cohort === 43
+    });
+    return studentArray;
 };
 
 // Export a function called getFullTimeStudents
 // It should not accept any parameters
 // It should return an array of only the full time students
-let fullTime = [];
 
 export const getFullTimeStudents = () => {
-
+    const fullTimeStudents = students.filter((student) => {
+        return student.fullTime === true;
+    })
+    return fullTimeStudents;
 };
 
 // Export a function called getStudentsByInstructorId
 // It should accept one integer parameter name `instructorId`
 // It should return an array of students with that instructor
 export const getStudentsByInstructorId = (instructorId) => {
-
+    const studentInstuctor = students.filter((students) => {
+        return students.instructorId === 5;
+    })
+        return studentInstuctor;
 };
 
 // Export a function called getPolyglotStudents
@@ -31,14 +39,21 @@ export const getStudentsByInstructorId = (instructorId) => {
 // It should return an array of students who know as many (or more) languages than `languageCount`
 // Ex: If the number 2 is passed to the function, only the students who know 2 or more languages should be returned
 export const getPolyglotStudents = (languageCount) => {
-
+    const foundLanguage = students.filter((langueage) => {
+        return language.languageCount.lenght > 2;
+    })
+    return foundLanguage;
 };
-
+ 
 // Export a function called getAvailableInstructors
 // It should not accept any parameters
 // It should return an array of instructors that don't have any students
+    let instructorArray = [];
 export const getAvailableInstructors = () => {
-
+    const noClasses = instructors.fileter((instructor) => {
+        return instructor.
+    })
+        return noClasses;
 };
 
 
