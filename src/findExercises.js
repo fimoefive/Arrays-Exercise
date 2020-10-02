@@ -7,18 +7,21 @@ const instructors = useInstructors();
 // It should accept one integer parameter named `id`
 // It should return the student object with the matching ID
 // Ex: getStudentById(1)
+
 export const getStudentById = (id) => {
     const foundId = students.find((studentId) => {
     return studentId.id === id;
     })
     return foundId;
 };
+
 // console.log(students.find(getStudentById));
 
 // Export a function called getInstructorById
 // It should accept one integer parameter named `id`
 // It should return the instructor object with the matching ID
 // Ex: getInstructorById(1)
+
 export const getInstructorById = (id) => {
     const foundInstructor = instructors.find((instructorId) => {
     return instructorId.id === id;
@@ -31,6 +34,7 @@ export const getInstructorById = (id) => {
 // It should return the student object whose last name matches `lastName`
 // It should NOT be case sensitive
 // Ex: getStudentByName("sMiTh")
+
 export const getStudentByLastName = (lastName) => {
     const foundName = students.find((studentName) => {
         return studentName.lastName === lastName;
@@ -43,23 +47,29 @@ export const getStudentByLastName = (lastName) => {
 // It should return the student object whose first and last name match `fullName`
 // It should NOT be case sensitive
 // Ex: getStudentByName("Summer SMITH")
+
 export const getStudentByName = (fullName) => {
-    const findStudent = students.find((student) => {
+    const findStudentName = students.find((student) => {
         const fullName = student.firstName + " " + student.lastName
         return fullName === fullName;
     })
-    return findStudent;
+    return findStudentName;
 };
 
 // Export a function called getInstructorOfStudent
 // It should accept one integeter parameter named `studentId`
 // It should return the instructor object of the student whose id matches `studentId`
 // Ex: getInstructorOfStudent(4)      // returns Brenda Long
+
 export const getInstructorOfStudent = (studentId) => {
-    const foundStudentId = instructors.find((instructor) => {
-        return instuctorOfStudent.studentId === studentId;
+    const foundStudentId = students.find((student) => {
+        return student.studentId === studentId;
     })
-    return foundStudentId;
+    const studentInstructor = foundStudentId.instructorId
+    const findInstructor = instructors.find((instructor) => {
+        return instructor.id === studentInstructor
+    })
+    return findInstructor;
 };
 
 // Export a function called getStudentWithMostLangs
